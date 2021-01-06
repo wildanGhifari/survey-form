@@ -3,10 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="assets/style.css">
     <title>Survey Form</title>
 </head>
 <body>
+    <header>
+        <h1 id="title">Susu Kocok Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve Our Products</p>
+    </header>
+
+    <main>
+        <form action="" id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Fullname</label>
+                <input type="text" id="name" class="form-control" name="name" placeholder="Enter your fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" class="form-control" name="email" placeholder="your@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Age</label>
+                <input type="number" id="number" class="form-control" name="age" min="10" max="99" placeholder="age">
+            </div>
+            <div class="form-group">
+                <p>Would you recommend Susu Kocok to a friend?</p>
+                <label>
+                    <input type="radio" name="user-recommend" class="input-radio" value="Definitely" checked>
+                    Definitely
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" class="input-radio" value="Maybe">
+                    Maybe
+                </label>
+                <label>
+                    <input type="radio" name="user-recommend" class="input-radio" value="Not Sure">
+                    Not Sure
+                </label>
+            </div>
+            <div class="form-group">
+                <p>What is your favorite flavour of Susu kocok?</p>
+                <select id="dropdown" class="form-control" name="mostLike" required>
+                    <option selected value="" disabled>- Select an option -</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="hazelnut">Hazelnut</option>
+                    <option value="redVelvet">Red Velvet</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="tiramisu">Tiramisu</option>
+                    <option value="taro">Taro</option>
+                    <option value="vanila">Vanila</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Any comments or suggestion?</p>
+                <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your comment here . . ."></textarea>
+            </div>
+
+            <button type="submit" id="submit" class="submit-button">Submit</button>
+        </form>
+    </main>
     
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
