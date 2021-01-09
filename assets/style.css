@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -20,17 +21,18 @@ body {
     #c471ed,
     #12c2e9
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  /* background-image: url(/assets/img/anthony-espinosa-ujxdhcpAQxk-unsplash.jpg); 
-  background-repeat: no-repeat;
-  background-size: cover; */
-  font-family: "Roboto", sans-serif;
-  text-align: center;
   color: #fff;
 }
 
 header {
+  text-align: center;
   padding: 32px 16px;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 form {
@@ -49,24 +51,30 @@ form {
 .form-group {
   margin: 24px 0;
 }
+
 label {
   display: flex;
   align-items: center;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 
-.form-group input {
+.form-control {
   width: 100%;
   margin-top: 8px;
   padding: 10px 16px;
   font-size: 14px;
   background: rgba(255, 255, 255, 0.35);
-  -webkit-box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
-  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+  /* -webkit-box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 5px;
   border: none;
+}
+
+.form-group input[type="radio"] {
+  width: auto;
 }
 
 .input-radio {
@@ -82,4 +90,34 @@ label {
   padding: 0.625rem;
   resize: vertical;
   font-size: 14px;
+  border: none;
+  border-radius: 10px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #12c2e9;
+  font-weight: 700;
+  color: #fff;
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  header {
+    text-align: center;
+    padding: 24px 12px;
+  }
+
+  form {
+    width: 100%;
+    margin-bottom: 0;
+    border-radius: 10px 10px 0 0;
+  }
 }
